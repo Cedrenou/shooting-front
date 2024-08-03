@@ -1,4 +1,4 @@
-name: Test SSH to Raspberry Pi
+name: Deploy to Raspberry Pi via ngrok
 
 on:
   push:
@@ -18,9 +18,17 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Test SSH connection
+      - name: Deploy to Raspberry Pi
         run: |
-          ssh -o StrictHostKeyChecking=no -T pi@$192.168.1.3 'echo "SSH connection successful"'
+          ssh -o StrictHostKeyChecking=no -p 14212 pi@tcp://2.tcp.eu.ngrok.io << 'EOF'
+            docker stop shooting-front || true
+            docker rm shooting-front || true
+            cd /home/pi/shooting-front
+            git pull
+            docker build -t shooting-front .
+            docker run -d -p 3000:3000 --name shooting-front --restart unless-stopped shooting-front
+          EOF
         env:
           SSH_USERNAME: pi
-          SSH_HOST: 192.168.1.3
+          SSH_HOST: <NGROK_ADDRESS>
+          NGROK_PORT: <NGROK_PORT>
