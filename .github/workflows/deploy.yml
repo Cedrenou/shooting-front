@@ -1,0 +1,39 @@
+name: Deploy to Raspberry Pi
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to Raspberry Pi
+        run: |
+          ssh -o StrictHostKeyChecking=no pi@192.168.1.3 << 'EOF'
+            # Arrêter et supprimer l'ancien conteneur
+            docker stop shooting-front || true
+            docker rm shooting-front || true
+          
+            # Aller dans le répertoire de déploiement
+            cd /home/pi/shooting-front
+          
+            # Puller les dernières modifications du dépôt
+            git pull
+          
+            # Construire l'image Docker localement
+            docker build -t shooting-front .
+          
+            # Exécuter l'application dans un nouveau conteneur
+            docker run -d -p 3000:3000 --name shooting-front --restart unless-stopped shooting-front
+          EOF
