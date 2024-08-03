@@ -9,7 +9,7 @@
         la différence !
       </p>
     </div>
-    <div class="right-block"></div>
+    <div class="right-block">Carousel here</div>
   </div>
 </template>
 
