@@ -142,7 +142,10 @@
       </div>
     </section>
 
-    <section class="py-10 bg-gray-200 ">
+    <section
+      v-if="false"
+      class="py-10 bg-gray-200 "
+    >
       <FacebookFeed />
     </section>
     <!-- Section Partenaires -->

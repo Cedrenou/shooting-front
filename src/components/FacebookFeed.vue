@@ -42,7 +42,7 @@
 import { ref, onMounted } from 'vue';
 
 const FB_APP_ID = '1016175703319947';
-const FB_PAGE_ID = 'shootingstarsroller';
+const FB_PAGE_ID = '106228554543676';
 const ACCESS_TOKEN = 'EAAOcNNfTZAYsBOxRuKYReEAsZC7Wdzimyc9N0qObkbn1yhWLp4ZARrjeN6KFYF9kDazlUeZAtPWJR9EzK3KL2tzdIPktWXUZAAJh9SKA5Go5OVmp9D9D1ROCOXrWed0JexAQg52IZBnfcVrZAtEsvq4x3zrYuHbWo3jiaMM5eFZAYKejQHt7ZBaq7x76trVvEvNCcTSFTHUp6x15VNbxAzQZDZD';
 
 const lastPost = ref(null);
