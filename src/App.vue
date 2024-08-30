@@ -115,12 +115,36 @@
                 Téléphone: 07 68 58 64 44
               </p>
               <p>Adresse: Gymnase, 54 Rue Jules Guesde, 37000 Tours (France)</p>
+
+              <h4 class="text-2xl font-semibold my-4 text-primary">
+                Suivez-nous
+              </h4>
+              <a
+                :href="urlFacebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300"
+              >
+                <span class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 fill-current"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                  Facebook
+                </span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="py-10 bg-gray-200 ">
+      <FacebookFeed />
+    </section>
     <!-- Section Partenaires -->
     <section
       id="partenaires"
@@ -203,6 +227,51 @@
         </div>
       </div>
     </section>
+
+    <footer class="bg-primary text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-between items-center">
+          <div class="w-full md:w-1/3 mb-4 md:mb-0">
+            <h3 class="text-xl font-semibold mb-2">
+              Shooting Stars
+            </h3>
+            <p>Club de Roller-Hockey</p>
+          </div>
+          <div class="w-full md:w-1/3 mb-4 md:mb-0">
+            <h4 class="text-lg font-semibold mb-2">
+              Contact
+            </h4>
+            <p>Email: rct.shootingstars@gmail.com</p>
+            <p>Tél: 07 68 58 64 44</p>
+          </div>
+          <div class="w-full md:w-1/3 text-center md:text-right">
+            <h4 class="text-lg font-semibold mb-2">
+              Suivez-nous
+            </h4>
+            <a
+              :href="urlFacebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300"
+            >
+              <span class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                Facebook
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <p>&copy; 2024 Shooting Stars Roller-Hockey. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -218,9 +287,11 @@ import partner1 from './assets/picto-georges.svg';
 import partner2 from './assets/Tours_logo_2015.svg';
 import partner3 from './assets/La-Maison-des-Halles-logo.jpg';
 import partner4 from './assets/Fédération_française_Roller_Sports_logo_2011.png';
+import FacebookFeed from './components/FacebookFeed.vue';
 import {ref} from 'vue';
 
 const urlHelloAsso = "https://www.helloasso.com/associations/roller-club-de-touraine/adhesions/adhesion-saison-2024-2025-roller-club-de-touraine-shooting-stars-2";
+const urlFacebook = "https://www.facebook.com/shootingstarsroller/";
 
 const historyImages = [
     photo1,
