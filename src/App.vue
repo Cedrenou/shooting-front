@@ -199,7 +199,11 @@
             :key="index"
             class="mb-4"
           >
+            <!--          add some accesibility to the button  -->
             <button
+              :id="'faq-item-' + index"
+              aria-expanded="true"
+              :aria-controls="'faq-item-' + index"
               class="flex justify-between items-center w-full p-5 font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 hover:bg-gray-200 focus:ring-4 focus:ring-gray-200"
               @click="toggleItem(index)"
             >
