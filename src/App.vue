@@ -12,7 +12,7 @@
       />
 
       <!-- Overlay bleu transparent -->
-      <div class="absolute inset-0 bg-primary opacity-80" />
+      <div class="absolute inset-0 bg-primary opacity-60" />
 
       <!-- Logo -->
       <img
