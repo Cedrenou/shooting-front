@@ -305,10 +305,10 @@ const historyImages = [
 ];
 
 const partners = [
-  { name: "Ville de Tours", logo: partner2, url: "https://www.tours.fr/" },
-  { name: "Les Georges", logo: partner1, url: "https://www.lesgeorges.com/" },
-  { name: "La Maison des Halles", logo: partner3, url: "https://lamaisondeshalles.eatbu.com/?lang=fr#" },
-  { name: "Fédération Française de Roller & Skateboard ", logo: partner4, url: "https://ffroller-skateboard.fr/" },
+  { name: "Ville de Tours", logo: partner2, url: "https://www.tours.fr/", alt: "Ville de Tours partenaires" },
+  { name: "Les Georges", logo: partner1, url: "https://www.lesgeorges.com/" , alt: "Les Georges partenaires"},
+  { name: "La Maison des Halles", logo: partner3, url: "https://lamaisondeshalles.eatbu.com/?lang=fr#", alt: "La Maison des Halles partenaires" },
+  { name: "Fédération Française de Roller & Skateboard ", logo: partner4, url: "https://ffroller-skateboard.fr/" , alt: "Fédération Française de Roller & Skateboard partenaires"},
 ];
 
 const faqItems = ref([
