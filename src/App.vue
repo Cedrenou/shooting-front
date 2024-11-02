@@ -289,6 +289,7 @@ import photo2 from './assets/photo2.jpg';
 import photo3 from './assets/photo3.jpg';
 import photo4 from './assets/photo4.jpg';
 import photo5 from './assets/photo5.jpg';
+import photo6 from './assets/photo6.jpeg';
 import LeafletMap from '@/components/LeafletMap.vue';
 import partner1 from './assets/picto-georges.svg';
 import partner2 from './assets/Tours_logo_2015.svg';
@@ -305,7 +306,8 @@ const historyImages = [
     photo2,
     photo3,
     photo4,
-    photo5
+    photo5,
+    photo6
 ];
 
 const partners = [
