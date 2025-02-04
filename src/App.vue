@@ -34,7 +34,7 @@
           target="_blank"
           class="bg-white text-blue-600 py-2 px-6 rounded-full font-semibold hover:bg-blue-100 transition duration-300"
         >
-          Obtenez votre licence maintenant
+          Faire un don
         </a>
       </div>
     </section>
@@ -76,14 +76,14 @@
       class="container mx-auto flex flex-col items-center py-16 px-4 md:px-0 justify-center"
     >
       <h1 class="text-4xl font-bold text-primary">
-        Inscription pour la saison 2024-2025
+        Aidez-nous le club à grandir !
       </h1>
 
       <a
         :href="urlHelloAsso"
         target="_blank"
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full mt-4"
-      >Inscrivez-vous</a>
+      >Faire un don</a>
     </section>
 
     <!-- Section Rencontrez-nous -->
@@ -142,12 +142,6 @@
       </div>
     </section>
 
-    <section
-      v-if="false"
-      class="py-10 bg-gray-200 "
-    >
-      <FacebookFeed />
-    </section>
     <!-- Section Partenaires -->
     <section
       id="partenaires"
@@ -295,10 +289,10 @@ import partner1 from './assets/picto-georges.svg';
 import partner2 from './assets/Tours_logo_2015.svg';
 import partner3 from './assets/La-Maison-des-Halles-logo.jpg';
 import partner4 from './assets/Fédération_française_Roller_Sports_logo_2011.png';
-import FacebookFeed from './components/FacebookFeed.vue';
+
 import {ref} from 'vue';
 
-const urlHelloAsso = "https://www.helloasso.com/associations/roller-club-de-touraine/adhesions/adhesion-saison-2024-2025-roller-club-de-touraine-shooting-stars-2";
+const urlHelloAsso = "https://www.helloasso.com/associations/roller-club-de-touraine/formulaires/1";
 const urlFacebook = "https://www.facebook.com/shootingstarsroller/";
 
 const historyImages = [
